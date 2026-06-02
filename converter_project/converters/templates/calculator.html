@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Калькулятор</title>
+</head>
+<body>
+
+    <h1>Калькулятор</h1>
+
+    <form method="post">
+
+        {% csrf_token %}
+
+        <input type="number" step="any" name="num1" placeholder="Первое число">
+
+        <select name="operation">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+
+        <input type="number" step="any" name="num2" placeholder="Второе число">
+
+        <button type="submit">
+            Посчитать
+        </button>
+
+    </form>
+
+    {% if result != None %}
+        <h2>Результат: {{ result }}</h2>
+    {% endif %}
+
+</body>
+</html>

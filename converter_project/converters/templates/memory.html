@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Память{% endblock %}
+{% block content %}
+<h1>Память</h1>
+<form method="post" class="form">
+    {% csrf_token %}
+    <input type="number" step="any" name="value" placeholder="Введите число">
+    <label>Из <select name="from_unit"><option value="kb">KB</option><option value="mb">MB</option><option value="gb">GB</option></select></label>
+    <label>В <select name="to_unit"><option value="kb">KB</option><option value="mb">MB</option><option value="gb">GB</option></select></label>
+    <button type="submit">Считать</button>
+</form>
+{% if result is not None %}
+<p class="result">Результат: {{ result }}</p>
+{% endif %}
+{% endblock %}

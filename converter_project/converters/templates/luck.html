@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}Удача{% endblock %}
+{% block content %}
+<h1>Удача</h1>
+<form method="post" class="form">
+    {% csrf_token %}
+    <button type="submit">Узнать удачу</button>
+</form>
+{% if result is not None %}
+<p class="result">Твоя удача: {{ result }}%</p>
+<p>{{ comment }}</p>
+{% endif %}
+{% endblock %}

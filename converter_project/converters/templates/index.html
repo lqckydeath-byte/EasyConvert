@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Главная — EasyConvert{% endblock %}
+{% block content %}
+<section class="hero">
+    <h1>Все нужные конвертеры в одном месте</h1>
+    <p>Быстро переходите к калькулятору, расчету площади, температуры, веса, памяти и другим инструментам.</p>
+</section>
+<ul class="list">
+    <li class="card"><a href="{% url 'calculator' %}">Калькулятор</a></li>
+    <li class="card"><a href="{% url 'square' %}">Квадрат</a></li>
+    <li class="card"><a href="{% url 'cube' %}">Куб</a></li>
+    <li class="card"><a href="{% url 'temperature' %}">Температура</a></li>
+    <li class="card"><a href="{% url 'weight' %}">Вес</a></li>
+    <li class="card"><a href="{% url 'memory' %}">Память</a></li>
+    <li class="card"><a href="{% url 'time' %}">Время</a></li>
+    <li class="card"><a href="{% url 'luck' %}">Удача</a></li>
+</ul>
+{% endblock %}

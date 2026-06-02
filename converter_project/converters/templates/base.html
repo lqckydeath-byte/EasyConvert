@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}EasyConvert{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'converters/styles.css' %}">
+</head>
+<body>
+<div class="page">
+    <header class="header">
+        <div class="brand"><a href="{% url 'home' %}">EasyConvert</a></div>
+        <nav class="menu">
+            <a href="{% url 'calculator' %}">Калькулятор</a>
+            <a href="{% url 'square' %}">Квадрат</a>
+            <a href="{% url 'cube' %}">Куб</a>
+            <a href="{% url 'temperature' %}">Температура</a>
+            <a href="{% url 'weight' %}">Вес</a>
+            <a href="{% url 'memory' %}">Память</a>
+            <a href="{% url 'time' %}">Время</a>
+            <a href="{% url 'luck' %}">Удача</a>
+        </nav>
+    </header>
+    <main class="main">
+        {% block content %}{% endblock %}
+    </main>
+    <footer class="footer">EasyConvert © 2026. Все права защищены.</footer>
+</div>
+</body>
+</html>

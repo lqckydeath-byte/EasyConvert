@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     
-    'converter_project.converters',
+    'converters',
 ]
 
 MIDDLEWARE = [
@@ -53,7 +53,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
 ]
 
-ROOT_URLCONF = 'converter_project.converter_project.urls'
+ROOT_URLCONF = 'converter_project.urls'
 
 TEMPLATES = [
     {
@@ -70,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'converter_project.converter_project.wsgi.application'
+WSGI_APPLICATION = 'converter_project.wsgi.application'
 
 
 # Database

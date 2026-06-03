@@ -76,10 +76,10 @@ def luck(request):
         result = random.randint(0, 100)
         if result < 30:
             comment = 'не повезло'
-        elif result < 70:
+        elif result < 80:
             comment = 'пойдет'
         else:
-            comment = 'беги в казино'
+            comment = 'Быстрее беги в казино'
 
     return render(request, 'luck.html', {'result': result, 'comment': comment})
 

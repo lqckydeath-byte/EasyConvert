@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class ConvertersConfig(AppConfig):
-    name = 'converters'
+    name = 'converter_project.converters'
